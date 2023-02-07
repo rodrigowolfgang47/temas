@@ -5,6 +5,20 @@ body{
     background-color: #0d1116;
     header{
         height: 100vh;
-        
+        background-image: url("/assets/image/planet.jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.25;
+        transform: rotate(180deg);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black);
+        mask-image: linear-gradient(to bottom, transparent, black);
+
+        nav{
+            
+        }
+    }
+    
+    .dois{
+        height: 100vh;
     }
 }
