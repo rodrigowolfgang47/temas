@@ -1,12 +1,13 @@
-const circles = document.querySelectorAll('.circle');
+var path = anime.path('.motion-path-demo path');
 
-circles.forEach(circle => {
-  circle.addEventListener('mouseover', function() {
-    anime({
-      targets: this,
-      scale: [2, 3, 1],
-      duration: 1000,
-      easing: 'easeInOutQuad'
-    });
-  });
+anime({
+  targets: '.bolinha',
+  translateY: -100,
+  translateX: -20,
+  easing: 'linear',
+  duration: 3000,
+  scale: 1.5,
+  loop: true,
+  direction: 'alternate'
 });
+
