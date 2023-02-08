@@ -1,10 +1,17 @@
-@import './help';
+@import './help', './varriaveis';
+
 
 body{
     width: 100%;
-    background-color: #0d1116;
-    header{
+    height: 100vh;
+    position: relative;
+    background-color: $background-primary;
+
+    .background{
+        position: absolute;
+        top: 0;
         height: 100vh;
+        width: 100%;
         background-image: url("/assets/image/planet.jpg");
         background-size: cover;
         background-position: center;
@@ -12,13 +19,28 @@ body{
         transform: rotate(180deg);
         -webkit-mask-image: linear-gradient(to bottom, transparent, black);
         mask-image: linear-gradient(to bottom, transparent, black);
+        z-index: -1;    
+    }
+    
+    .nav-content{
+        background-color: #0d1116;
+        padding: 20px;
+        justify-content: space-between;
+
+        .logo{
+            font-size: 1em;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
 
         nav{
             
+            ul{
+                flex-direction: row;
+                gap: 2em;
+            }
+
         }
     }
-    
-    .dois{
-        height: 100vh;
-    }
 }
+
