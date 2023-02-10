@@ -7,11 +7,21 @@ star.forEach(function(el){
 })
 
 anime({
-  targets: '.bolinha',
-  translateY: -100,
+  targets: '.astronauta',
+  translateY: -70,
   translateX: -20,
-  easing: 'linear',
+  easing: 'easeInOutQuad',
   duration: 3000,
+  loop: true,
+  direction: 'alternate'
+});
+
+anime({
+  targets: '.pedra-01',
+  translateX: -600,
+  translateY: 100,
+  easing: 'linear',
+  duration: 30000,
   loop: true,
   direction: 'alternate'
 });
@@ -20,7 +30,7 @@ anime({
   targets: '.star',
   easing: 'linear',
   duration: 1000,
-  scale: 3,
+  scale: 4,
   loop: true,
   direction: 'alternate',
   delay: anime.stagger(100) // increase delay by 100ms for each elements.

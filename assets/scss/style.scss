@@ -8,21 +8,21 @@ body {
     background-color: $background-primary;
     overflow: hidden;
 
-    .main{
+    .main {
         width: 100%;
         max-width: 1154px;
 
-        .nav-content{
+        .nav-content {
             padding-top: 65px;
             justify-content: space-between;
 
-            nav{
-                ul{
+            nav {
+                ul {
                     align-items: center;
                     margin-left: 30px;
                     gap: 38px;
-                    
-                    li{
+
+                    li {
                         list-style: none;
                         font-weight: 500;
                         cursor: pointer;
@@ -30,13 +30,34 @@ body {
                 }
             }
 
-            .download-content{
+            .download-content {
                 align-items: center;
+            }
+        }
+
+        .sobre-mim {
+            margin-top: 120px;
+            padding-left: 135px;
+            width: 100%;
+            max-width: 50%;
+            position: relative;
+
+            h1 {
+                font-size: 2.5em;
+                font-weight: bold;
+            }
+
+            p {
+                font-size: 1.5em;
+                margin: 15px 0 30px 0;
+                line-height: 35px;
+                color: $secundary-text-color;
             }
         }
     }
 
-    .primary-button{
+    .primary-button,
+    .sencundary-button {
         padding: 10px;
         background-color: $blue-color;
         font-weight: bold;
@@ -45,15 +66,80 @@ body {
         cursor: pointer;
     }
 
+    .sencundary-button {
+        background-color: rgba($color: #fff, $alpha: 0);
+        border: 1px solid $blue-color;
+    }
+
+    .background,
+    .planta-01,
+    .planta-02,
+    .astronauta,
+    .pedra-01,
+    .pedra-02,
+    .pedra-03 {
+        position: absolute;
+    }
+
 
     .background {
-        position: absolute;
         top: -100px;
         height: 100vh;
         width: 100%;
         background-image: url("/assets/image/background.png");
         background-size: cover;
         background-position: center;
+        z-index: -2;
+    }
+
+    .planta-01 {
+        top: -54px;
+        left: -412px;
+        height: 110%;
         z-index: -1;
+    }
+
+    .planta-02 {
+        top: 96px;
+        left: 1297px;
+        height: 110%;
+        z-index: -1;
+    }
+
+    .pedra-01{
+        top: 467px;
+        left: 1325px;
+    }
+
+    .pedra-02{
+        top: 159px;
+        left: 1002px;
+    }
+
+    .pedra-03{
+        top: 96px;
+        left: 1297px;
+        img{
+            width: 50%;
+            rotate: 30deg;
+        }
+    }
+
+    .astronauta {
+        height: 110%;
+        z-index: -1;
+        top: 215px;
+        right: 534px;
+    }
+
+    .star{
+        width: 1px;
+        height: 1px;
+        border-radius: 50px;
+        background-image: radial-gradient(#fff, transparent);
+        backdrop-filter: blur(2px);
+        box-shadow: (0px 0px 25px #fff );
+        margin: 25px auto;
+        position: absolute;
     }
 }
