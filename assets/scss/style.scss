@@ -14,6 +14,7 @@ body {
     .main {
         width: 100%;
         max-width: 1154px;
+        position: relative;
 
         .nav-content {
             padding-top: 65px;
@@ -46,9 +47,11 @@ body {
             max-width: 50%;
             position: relative;
 
-            h1 {
+            .main-text{
                 font-size: 2.5em;
-                font-weight: bold;
+                h1 {
+                    font-weight: bold;
+                }
             }
 
             p {
@@ -60,14 +63,21 @@ body {
         }
     }
 
+    // Classes gerais
+
     .primary-button,
     .sencundary-button {
-        padding: 10px;
+        padding: 14px;
         background-color: $blue-color;
         font-weight: bold;
         border-radius: 7px;
         border: none;
         cursor: pointer;
+    }
+
+    .sencundary-button {
+        background-color: rgba($color: #fff, $alpha: 0);
+        border: 1px solid $blue-color;
     }
 
     @import "../../node_modules/hover.css/scss/effects/2d-transitions/bob";
@@ -94,11 +104,6 @@ body {
     }
 
 
-    .sencundary-button {
-        background-color: rgba($color: #fff, $alpha: 0);
-        border: 1px solid $blue-color;
-    }
-
     .background,
     .planta-01,
     .planta-02,
@@ -113,24 +118,34 @@ body {
     .background {
         top: -100px;
         height: 100vh;
-        width: 100%;
+        width: 100vw;
         background-image: url("/assets/image/background.png");
         background-size: cover;
         background-position: center;
         z-index: -2;
     }
 
+    .background-content-rock{
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        z-index: -1;
+    }
+
     .planta-01 {
         top: -54px;
         left: -412px;
-        height: 110%;
         z-index: -1;
+        img{
+            display: block;
+            width: 52vw;
+        }
     }
 
     .planta-02 {
         top: 96px;
-        left: 1297px;
-        height: 110%;
+        right: 1vw;
         z-index: -1;
     }
 
@@ -150,16 +165,13 @@ body {
         left: 1297px;
 
         img {
-            width: 50%;
             rotate: 30deg;
         }
     }
 
     .astronauta {
-        height: 110%;
-        z-index: -1;
         top: 215px;
-        right: 534px;
+        right: 15%;
     }
 
     .star {

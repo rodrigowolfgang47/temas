@@ -20,6 +20,7 @@
     "animejs": "^3.2.1",
     "hover.css": "^2.3.2",
     "jquery": "^3.6.3",
+    "tilt.js": "^1.2.1",
     "typed.js": "^2.0.12",
     "waypoints": "^4.0.1"
   }
