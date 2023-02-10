@@ -1,4 +1,7 @@
 @import './help', './varriaveis';
+@import "../../node_modules/hover.css/scss/options";
+@import "../../node_modules/hover.css/scss/mixins";
+@import "../../node_modules/hover.css/scss/hacks";
 
 
 body {
@@ -26,6 +29,7 @@ body {
                         list-style: none;
                         font-weight: 500;
                         cursor: pointer;
+                        padding: 15px 0;
                     }
                 }
             }
@@ -65,6 +69,30 @@ body {
         border: none;
         cursor: pointer;
     }
+
+    @import "../../node_modules/hover.css/scss/effects/2d-transitions/bob";
+
+    @if $includeClasses {
+        .#{$nameSpace}-bob {
+            @include bob();
+        }
+    }
+
+    @import "../../node_modules/hover.css/scss/effects/background-transitions/bounce-to-right";
+
+    @if $includeClasses {
+        .#{$nameSpace}-bounce-to-right {
+            @include bounce-to-right();
+        }
+    }
+
+    @import "../../node_modules/hover.css/scss/effects/border-transitions/underline-from-center";
+    @if $includeClasses {
+        .#{$nameSpace}-underline-from-center {
+            @include underline-from-center();
+        }
+    }
+
 
     .sencundary-button {
         background-color: rgba($color: #fff, $alpha: 0);
@@ -106,20 +134,22 @@ body {
         z-index: -1;
     }
 
-    .pedra-01{
+    .pedra-01 {
         top: 467px;
         left: 1325px;
     }
 
-    .pedra-02{
+    .pedra-02 {
         top: 159px;
         left: 1002px;
+        z-index: -1;
     }
 
-    .pedra-03{
+    .pedra-03 {
         top: 96px;
         left: 1297px;
-        img{
+
+        img {
             width: 50%;
             rotate: 30deg;
         }
@@ -132,13 +162,13 @@ body {
         right: 534px;
     }
 
-    .star{
+    .star {
         width: 1px;
         height: 1px;
         border-radius: 50px;
         background-image: radial-gradient(#fff, transparent);
         backdrop-filter: blur(2px);
-        box-shadow: (0px 0px 25px #fff );
+        box-shadow: (0px 0px 25px #fff);
         margin: 25px auto;
         position: absolute;
     }

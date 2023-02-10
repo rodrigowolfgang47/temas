@@ -21,7 +21,30 @@ anime({
   translateX: -600,
   translateY: 100,
   easing: 'linear',
-  duration: 30000,
+  duration: 50000,
+  loop: true,
+  rotate: '-90deg',
+  direction: 'alternate'
+});
+
+anime({
+  targets: '.pedra-02',
+  translateX: -600,
+  translateY: -100,
+  rotate: '1turn',
+  easing: 'linear',
+  duration: 35000,
+  loop: true,
+  direction: 'alternate'
+});
+
+anime({
+  targets: '.pedra-03',
+  translateX: -600,
+  translateY: -200,
+  rotate: '1turn',
+  easing: 'linear',
+  duration: 40000,
   loop: true,
   direction: 'alternate'
 });
