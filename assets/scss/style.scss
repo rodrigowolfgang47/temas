@@ -9,7 +9,7 @@ body {
     height: 100vh;
     position: relative;
     background-color: $background-primary;
-    overflow: hidden;
+    // overflow: hidden;
 
     .main {
         width: 100%;
@@ -57,9 +57,92 @@ body {
             p {
                 font-size: 1.5em;
                 margin: 15px 0 30px 0;
-                line-height: 35px;
+                line-height: 30px;
                 color: $secundary-text-color;
             }
+        }
+
+        .skills{
+            margin-top: $margin-from-top;
+            flex-direction: column;
+
+            &-dicrible{
+                padding-left: 45px;
+            }
+
+            &-text{
+                padding-left: 25px;
+                
+                h2{
+                    font-size: 1.6em;
+                    font-weight: 400;
+                }
+
+                p{
+                    font-size: 1.7em;
+                    font-weight: 500;
+                    line-height: 30px;
+                    max-width: 70%;
+                    padding-top: 15px;
+                }
+            }
+
+            
+
+            &-icon{
+                justify-content: center;
+                flex-wrap: wrap;
+                
+                &::after{
+                    content: "";
+                    display: block;
+                    height: 200px;
+                    width: 3px;
+                    background-image: linear-gradient(to bottom,#864cf0,#161b2200);
+                    z-index: -1;
+                }
+            }
+
+            &-hate-content{
+                width: 100%;
+                flex-wrap: wrap;
+                background-color: $primary-color;
+                padding: 20px;
+                justify-content: flex-start;
+                gap: 22px;
+                border-radius: 7px;
+                margin: -50px 0 150px 0;
+                box-shadow: -1px 3px 19px 11px #070707bf;
+            }
+
+            &-hating{
+                padding: 15px;
+                gap: 20px;
+                border-radius: 7px;
+                border: $border;flex-direction: column;
+            }
+
+            &-value{
+                flex-direction: column;
+                gap: 10px;
+
+                flex-wrap: nowrap;
+
+                .bar{
+                    width: 100%;
+                    background-color: #fff;
+                    height: 2px;
+                    position: relative;
+
+                    .bar-value{
+                        content: "";
+                        height: 2px;
+                        background-color: #864cf0;
+                        position: absolute;
+                    }
+                }
+            }
+            
         }
     }
 
@@ -118,7 +201,7 @@ body {
     .background {
         top: -100px;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         background-image: url("/assets/image/background.png");
         background-size: cover;
         background-position: center;
@@ -126,7 +209,7 @@ body {
     }
 
     .background-content-rock{
-        width: 100vw;
+        width: 100%;
         height: 100%;
         position: absolute;
         overflow: hidden;
@@ -183,5 +266,13 @@ body {
         box-shadow: (0px 0px 25px #fff);
         margin: 25px auto;
         position: absolute;
+    }
+
+    i{
+        fill: #fff;
+        font-size: 27px;
+        box-shadow: inset 0 0 10px $blue-color, 0 0 23px $blue-color;
+        margin-bottom: 5px;
+        
     }
 }

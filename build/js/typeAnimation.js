@@ -1,6 +1,6 @@
 var options = {
   strings: ['Olá, me chamo Rodrigo', 'Sou desenvolvedor. . .', 'Python, Php, Javacript'  ],
-  typeSpeed: 30,
+  typeSpeed: 50,
   backSpeed: 20,
   loop:true
 };
