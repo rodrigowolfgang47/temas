@@ -115,6 +115,7 @@ body {
                 gap: 22px;
                 border-radius: 7px;
                 box-shadow: -1px 3px 19px 11px #070707bf;
+                border: $border;
             }
 
             &-hating {
@@ -170,7 +171,7 @@ body {
         }
 
         .job {
-            
+
             &-content {
                 flex-grow: 1;
                 min-width: 485px;
@@ -180,7 +181,7 @@ body {
                 padding: 25px;
                 box-sizing: border-box;
 
-                &-patagrapher{
+                &-patagrapher {
                     font-size: 0.9em;
                     font-weight: 400;
                     color: $secundary-text-color;
@@ -189,181 +190,211 @@ body {
                     padding-top: 10px;
                 }
 
-                .main-tec{
-                    
+                .main-tec {
+
                     justify-content: flex-start;
                     flex-direction: column;
                     margin-top: 15px;
 
-                    span{
+                    span {
                         color: $secundary-text-color;
                         opacity: $text-opacity;
                         font-size: .7em;
                     }
 
-                    h4{
+                    h4 {
                         font-weight: 500;
                         margin-top: 5px;
                     }
                 }
             }
 
-            &-title{
+            &-title {
                 justify-content: space-between;
                 align-items: center;
                 flex-wrap: nowrap;
 
-                h3{
+                h3 {
                     font-size: 1em;
                 }
-                
-                p, &-interprise{
+
+                p,
+                &-interprise {
                     font-size: 0.8em;
                     color: $secundary-text-color;
                     opacity: 0.7;
                 }
-                p{
+
+                p {
                     display: block;
                 }
 
-                &-interprise{
+                &-interprise {
                     padding-top: 5px;
                 }
             }
 
         }
 
-    }
+        .education {
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
 
-    // Classes gerais
+            h2 {
+                font-size: 2em;
+                margin-bottom: 15px;
 
-    .primary-button,
-    .sencundary-button {
-        padding: 14px;
-        background-color: $blue-color;
-        font-weight: bold;
-        border-radius: 7px;
-        border: none;
-        cursor: pointer;
-    }
+                span {
+                    font-weight: 200;
+                }
+            }
 
-    .sencundary-button {
-        background-color: rgba($color: #fff, $alpha: 0);
-        border: 1px solid $blue-color;
-    }
+            .skills-hating {
+                border: none;
+            }
 
-    @import "../../node_modules/hover.css/scss/effects/2d-transitions/bob";
 
-    @if $includeClasses {
-        .#{$nameSpace}-bob {
-            @include bob();
+            .job-content {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                width: 100%;
+                max-width: 100%;
+            }
+
         }
     }
 
-    @import "../../node_modules/hover.css/scss/effects/background-transitions/bounce-to-right";
+}
 
-    @if $includeClasses {
-        .#{$nameSpace}-bounce-to-right {
-            @include bounce-to-right();
-        }
+// Classes gerais
+
+.primary-button,
+.sencundary-button {
+    padding: 14px;
+    background-color: $blue-color;
+    font-weight: bold;
+    border-radius: 7px;
+    border: none;
+    cursor: pointer;
+}
+
+.sencundary-button {
+    background-color: rgba($color: #fff, $alpha: 0);
+    border: 1px solid $blue-color;
+}
+
+@import "../../node_modules/hover.css/scss/effects/2d-transitions/bob";
+
+@if $includeClasses {
+    .#{$nameSpace}-bob {
+        @include bob();
     }
+}
 
-    @import "../../node_modules/hover.css/scss/effects/border-transitions/underline-from-center";
+@import "../../node_modules/hover.css/scss/effects/background-transitions/bounce-to-right";
 
-    @if $includeClasses {
-        .#{$nameSpace}-underline-from-center {
-            @include underline-from-center();
-        }
+@if $includeClasses {
+    .#{$nameSpace}-bounce-to-right {
+        @include bounce-to-right();
     }
+}
 
+@import "../../node_modules/hover.css/scss/effects/border-transitions/underline-from-center";
 
-    .background,
-    .planta-01,
-    .planta-02,
-    .astronauta,
-    .pedra-01,
-    .pedra-02,
-    .pedra-03 {
-        position: absolute;
+@if $includeClasses {
+    .#{$nameSpace}-underline-from-center {
+        @include underline-from-center();
     }
+}
 
 
-    .background {
-        top: -100px;
-        height: 100vh;
-        width: 100%;
-        background-image: url("/assets/image/background.png");
-        background-size: cover;
-        background-position: center;
-        z-index: -2;
+.background,
+.planta-01,
+.planta-02,
+.astronauta,
+.pedra-01,
+.pedra-02,
+.pedra-03 {
+    position: absolute;
+}
+
+
+.background {
+    top: -100px;
+    height: 100vh;
+    width: 100%;
+    background-image: url("/assets/image/background.png");
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+
+.background-content-rock {
+    width: 100%;
+    height: 150%;
+    position: absolute;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.planta-01 {
+    top: -54px;
+    left: -412px;
+    z-index: -1;
+
+    img {
+        display: block;
+        width: 52vw;
     }
+}
 
-    .background-content-rock {
-        width: 100%;
-        height: 150%;
-        position: absolute;
-        overflow: hidden;
-        z-index: -1;
+.planta-02 {
+    top: 96px;
+    right: 1vw;
+    z-index: -1;
+}
+
+.pedra-01 {
+    top: 467px;
+    left: 1325px;
+}
+
+.pedra-02 {
+    top: 159px;
+    left: 1002px;
+    z-index: -1;
+}
+
+.pedra-03 {
+    top: 96px;
+    left: 1297px;
+
+    img {
+        rotate: 30deg;
     }
+}
 
-    .planta-01 {
-        top: -54px;
-        left: -412px;
-        z-index: -1;
+.astronauta {
+    top: 215px;
+    right: 15%;
+}
 
-        img {
-            display: block;
-            width: 52vw;
-        }
-    }
+.star {
+    width: 1px;
+    height: 1px;
+    border-radius: 50px;
+    background-image: radial-gradient(#fff, transparent);
+    backdrop-filter: blur(2px);
+    box-shadow: (0px 0px 25px #fff);
+    margin: 25px auto;
+    position: absolute;
+}
 
-    .planta-02 {
-        top: 96px;
-        right: 1vw;
-        z-index: -1;
-    }
-
-    .pedra-01 {
-        top: 467px;
-        left: 1325px;
-    }
-
-    .pedra-02 {
-        top: 159px;
-        left: 1002px;
-        z-index: -1;
-    }
-
-    .pedra-03 {
-        top: 96px;
-        left: 1297px;
-
-        img {
-            rotate: 30deg;
-        }
-    }
-
-    .astronauta {
-        top: 215px;
-        right: 15%;
-    }
-
-    .star {
-        width: 1px;
-        height: 1px;
-        border-radius: 50px;
-        background-image: radial-gradient(#fff, transparent);
-        backdrop-filter: blur(2px);
-        box-shadow: (0px 0px 25px #fff);
-        margin: 25px auto;
-        position: absolute;
-    }
-
-    i {
-        fill: #fff;
-        font-size: 27px;
-        box-shadow: inset 0 0 10px $blue-color, 0 0 23px $blue-color;
-        margin-bottom: 5px;
-        border-radius: 10px;
-    }
+i {
+    fill: #fff;
+    font-size: 27px;
+    box-shadow: inset 0 0 10px $blue-color, 0 0 23px $blue-color;
+    margin-bottom: 5px;
+    border-radius: 10px;
 }
