@@ -21,6 +21,35 @@ body {
             display: none;
         }
 
+        .topo-fixo{
+            background-color: rgba($color: $background-primary, $alpha: 1);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: -100px;
+            width: 100%;
+            left: 0;
+            justify-content: center !important;
+            z-index: 2;
+            padding: 15px 0 !important;
+            box-shadow: -1px 3px 19px 11px #070707bf;
+            transition: top 0.2s ease-out;
+
+
+            .content{
+                max-width: 1154px;
+                width: 100%;
+                justify-content: space-between;
+                
+            }
+
+        }
+
+        .topo-fixo.open{
+            top: 0px;
+        }
+
+
+
         .nav-content {
             padding-top: 65px;
             justify-content: space-between;
@@ -257,7 +286,7 @@ body {
                 }
 
                 p {
-                    display: block;
+                    text-align: right;
                 }
 
                 &-interprise {
@@ -492,7 +521,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    top: 611vh;
+    top: 540vh;
 }
 
 
