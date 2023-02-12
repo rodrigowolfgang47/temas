@@ -237,7 +237,6 @@ body {
         }
 
         .education {
-            justify-content: space-between;
             gap: 20px;
             flex-wrap: wrap;
 
@@ -254,6 +253,12 @@ body {
                 border: none;
             }
 
+            .skills-hate-content{
+                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
+            }
+
 
             .job-content {
                 padding-top: 15px;
@@ -261,6 +266,16 @@ body {
                 width: 100%;
                 max-width: 100%;
             }
+
+            .last{
+                position: relative;
+                justify-content: center;
+                .primary-button{
+                    position: absolute;
+                    bottom: -22px;
+                }
+            }
+
 
         }
     }
