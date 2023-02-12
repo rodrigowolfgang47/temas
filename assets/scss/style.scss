@@ -47,8 +47,9 @@ body {
             max-width: 50%;
             position: relative;
 
-            .main-text{
+            .main-text {
                 font-size: 2.5em;
+
                 h1 {
                     font-weight: bold;
                 }
@@ -62,23 +63,23 @@ body {
             }
         }
 
-        .skills{
+        .skills {
             margin-top: $margin-from-top;
             flex-direction: column;
 
-            &-dicrible{
+            &-dicrible {
                 padding-left: 45px;
             }
 
-            &-text{
+            &-text {
                 padding-left: 25px;
-                
-                h2{
+
+                h2 {
                     font-size: 1.6em;
                     font-weight: 400;
                 }
 
-                p{
+                p {
                     font-size: 1.7em;
                     font-weight: 500;
                     line-height: 30px;
@@ -87,23 +88,25 @@ body {
                 }
             }
 
-            
 
-            &-icon{
+
+            &-icon {
                 justify-content: center;
-                flex-wrap: wrap;
-                
-                &::after{
+                flex-wrap: nowrap;
+                flex-direction: column;
+                align-items: center;
+
+                &::after {
                     content: "";
                     display: block;
                     height: 200px;
                     width: 3px;
-                    background-image: linear-gradient(to bottom,#864cf0,#161b2200);
+                    background-image: linear-gradient(to bottom, #864cf0, #161b2200);
                     z-index: -1;
                 }
             }
 
-            &-hate-content{
+            &-hate-content {
                 width: 100%;
                 flex-wrap: wrap;
                 background-color: $primary-color;
@@ -111,30 +114,30 @@ body {
                 justify-content: flex-start;
                 gap: 22px;
                 border-radius: 7px;
-                margin: -50px 0 150px 0;
                 box-shadow: -1px 3px 19px 11px #070707bf;
             }
 
-            &-hating{
+            &-hating {
                 padding: 15px;
                 gap: 20px;
                 border-radius: 7px;
-                border: $border;flex-direction: column;
+                border: $border;
+                flex-direction: column;
             }
 
-            &-value{
+            &-value {
                 flex-direction: column;
                 gap: 10px;
 
                 flex-wrap: nowrap;
 
-                .bar{
+                .bar {
                     width: 100%;
                     background-color: #fff;
                     height: 2px;
                     position: relative;
 
-                    .bar-value{
+                    .bar-value {
                         content: "";
                         height: 2px;
                         background-color: #864cf0;
@@ -142,8 +145,94 @@ body {
                     }
                 }
             }
-            
+
         }
+
+        .others-content {
+            margin-top: 0 !important;
+
+            .others-text {
+                margin-top: 207px;
+            }
+
+            .other {
+                &::before {
+                    content: "";
+                    display: block;
+                    height: 200px;
+                    width: 3px;
+                    background-image: linear-gradient(to top, #864cf0, #161b2200);
+                    z-index: -1;
+                    margin-bottom: 10px;
+                }
+            }
+
+        }
+
+        .job {
+            
+            &-content {
+                flex-grow: 1;
+                min-width: 485px;
+                flex-direction: column;
+                gap: 0;
+                max-width: 49%;
+                padding: 25px;
+                box-sizing: border-box;
+
+                &-patagrapher{
+                    font-size: 0.9em;
+                    font-weight: 400;
+                    color: $secundary-text-color;
+                    opacity: $text-opacity;
+                    text-align: justify;
+                    padding-top: 10px;
+                }
+
+                .main-tec{
+                    
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    margin-top: 15px;
+
+                    span{
+                        color: $secundary-text-color;
+                        opacity: $text-opacity;
+                        font-size: .7em;
+                    }
+
+                    h4{
+                        font-weight: 500;
+                        margin-top: 5px;
+                    }
+                }
+            }
+
+            &-title{
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+
+                h3{
+                    font-size: 1em;
+                }
+                
+                p, &-interprise{
+                    font-size: 0.8em;
+                    color: $secundary-text-color;
+                    opacity: 0.7;
+                }
+                p{
+                    display: block;
+                }
+
+                &-interprise{
+                    padding-top: 5px;
+                }
+            }
+
+        }
+
     }
 
     // Classes gerais
@@ -180,6 +269,7 @@ body {
     }
 
     @import "../../node_modules/hover.css/scss/effects/border-transitions/underline-from-center";
+
     @if $includeClasses {
         .#{$nameSpace}-underline-from-center {
             @include underline-from-center();
@@ -208,9 +298,9 @@ body {
         z-index: -2;
     }
 
-    .background-content-rock{
+    .background-content-rock {
         width: 100%;
-        height: 100%;
+        height: 150%;
         position: absolute;
         overflow: hidden;
         z-index: -1;
@@ -220,7 +310,8 @@ body {
         top: -54px;
         left: -412px;
         z-index: -1;
-        img{
+
+        img {
             display: block;
             width: 52vw;
         }
@@ -268,11 +359,11 @@ body {
         position: absolute;
     }
 
-    i{
+    i {
         fill: #fff;
         font-size: 27px;
         box-shadow: inset 0 0 10px $blue-color, 0 0 23px $blue-color;
         margin-bottom: 5px;
-        
+        border-radius: 10px;
     }
 }
