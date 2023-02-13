@@ -21,6 +21,71 @@ body {
             display: none;
         }
 
+        .menu-mb-fix{
+            position: fixed;
+            left: 0;
+            top: -300px;
+            width: 100%;
+            z-index: 3;
+            padding: 15px 0;
+            background-color: rgba($color: $background-primary, $alpha: 1);
+            box-shadow: -1px 3px 19px 11px #070707bf;
+            transition: left 0.3s ease-out;
+
+            .fixed{
+                padding-top: 0px !important;
+            }
+        }
+
+        .menu-mb-fix.drop{
+            top: 0;
+        }
+
+
+        .menu-mobile{
+            width: 25%;
+            background-color: $background-primary;
+            position: fixed;
+            left: -673px;
+            top: 0px;
+            height: 100vh;
+            z-index: 4;
+            padding: 30px;
+            padding-top: 118px;
+            box-shadow: -1px 3px 19px 11px #070707bf;
+            transition: left 0.3s ease-out;
+
+            .not{
+                background-color: $blue-color;
+                border-radius: 2px;
+                font-size: 1.3em;
+                padding: 7px;
+                box-sizing: border-box;
+                position: absolute;
+                left: 178px;
+                top: 114px
+            }
+
+            ul{
+                flex-direction: column;
+                
+
+                li{
+                    color: #fff;
+                    font-size: 1em;
+                    cursor: pointer;
+                    font-weight: 500;
+                    margin-bottom: 20px;
+                    padding: 5px 0;
+                }
+            }
+
+        }
+
+        .menu-mobile.opened{
+            left: 0px;
+        }
+
         .topo-fixo{
             background-color: rgba($color: $background-primary, $alpha: 1);
             backdrop-filter: blur(10px);
@@ -70,7 +135,7 @@ body {
 
                 .linha{
                     width: 30px;
-                    height: 4px;
+                    height: 2px;
                     background-color: #fff;
                     border-radius: 10px;
                 }
@@ -593,20 +658,30 @@ body {
     position: absolute;
 }
 
-i {
+i{
     fill: #fff;
     font-size: 27px;
-    box-shadow: inset 0 0 10px $blue-color, 0 0 23px $blue-color;
     margin-bottom: 5px;
     border-radius: 10px;
+}
+
+i:not(.not){
+    box-shadow: inset 0 0 10px $blue-color, 0 0 23px $blue-color;
 }
 
 
 //Aqui começa o mobile
 
 @media only screen and (max-width: 1156px) {
+    .topo-fixo-desk{
+        display: none;
+    }
     .desk{
         display: none !important;
+    }
+
+    .menu-mobile.opened{
+        left: -400px;
     }
 
     .mobile{
